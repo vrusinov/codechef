@@ -41,7 +41,7 @@ def eopr(x: int, y: int) -> int:
                 return 3
             else:
                 return 2
-    if x > y:
+    else:  # x > y
         if (x % 2 == 0) ^ (y % 2 == 0):
             # a = 1
             # b = y - x + 1 # odd
@@ -51,6 +51,7 @@ def eopr(x: int, y: int) -> int:
         else:
             # if both are even or both are odd, we can do single x = x - b
             return 1
+    return -1  # Should never be reached but pylance complains without it
 
 
 def main():
