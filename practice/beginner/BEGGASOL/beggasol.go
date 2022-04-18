@@ -13,15 +13,14 @@ import (
 func gasolineIntroduction(n int, f []int) int {
   carFuel := 0
   distance := 0
-  for _, f_i := range f {
+  for _, fI := range f {
     // Do one "step"
-    carFuel = carFuel + f_i - 1
+    carFuel = carFuel + fI - 1
     if carFuel < 0 {
       // Ran out of fuel
       return distance
-    } else {
-      distance += f_i
     }
+    distance += fI
   }
   // Did not ran out of fuel, lapping other cars
   return distance
@@ -52,11 +51,11 @@ func readIntSlice(reader *bufio.Reader) ([]int, error) {
   }
   parts := strings.Split(s, " ")
   for _, val := range parts {
-    f_n, err := strconv.Atoi(val)
+    fN, err := strconv.Atoi(val)
     if err != nil {
       return nil, err
     }
-    f = append(f, f_n)
+    f = append(f, fN)
   }
   return f, nil
 }
