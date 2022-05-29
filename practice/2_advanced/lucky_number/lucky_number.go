@@ -10,73 +10,26 @@ import (
 	"os"
 )
 
-// removeNumbers attempts to remove numbers divisible by both mine and others.
-func removeNumbersGreedy(mine, others int, numbers []int) (int, []int) {
-	removed := 0
-	result := make([]int, 0, len(numbers))
-	for _, number := range numbers {
-		if ((number % mine == 0) && (number % others == 0)) {
-			removed += 1
-			continue
-		}
-		result = append(result, number)
-	}
-
-	return removed, result
-}
-
-// removeNumbers attempts to remove numbers divisible by both mine and others.
-func removeOneNumber(mine int, numbers []int) (int, []int) {
-	for i, a := range numbers {
-		if (a % mine == 0) {
-			return 1, append(numbers[:i], numbers[i+1:]...)
-		}
-	}
-
-	return 0, numbers
-}
-
 func luckyGame(a, b int, numbers []int) string {
-	// fmt.Printf("Start array: %v\n", numbers)
-	// Bob plays first
-	removed := 0
-	removed, numbers = removeNumbersGreedy(a, b, numbers)
-	// fmt.Printf("Bob removed %v, array is %v\n", removed, numbers)
-	if (removed == 0) {
-		// Nothing to remove greedily, try to remove one.
-		removed, numbers = removeOneNumber(a, numbers)
-		if (removed == 0) {
-			// Failed to remove any. Alice wins.
-			return "ALICE"
+	// Don't actually need to remove numbers, just count divisible by both, by a and by b.
+	div_ab := 0
+	div_a := 0
+	div_b := 0
+	for _, n := range numbers {
+		if ((n % a == 0) && (n % b == 0)) {
+			div_ab++
+		} else if (n % a == 0) {
+			div_a++
+		} else if (n % b == 0) {
+			div_b++
 		}
 	}
-	// fmt.Printf("Bob removed %v, array is %v\n", removed, numbers)
-	// Now Alice plays:
-	removed, numbers = removeNumbersGreedy(b, a, numbers)
-	if (removed == 0) {
-		// Nothing to remove greedily, try to remove one.
-		removed, numbers = removeOneNumber(b, numbers)
-		if (removed == 0) {
-			// Failed to remove any. Bob wins.
-			return "BOB"
-		}
+	//fmt.Printf("%v, %v %v: ab: %v, a: %b, b: %v\n", a, b, numbers, div_ab, div_a, div_b)
+	// Bob will have div_ab + div_a moves.
+	if (div_ab + div_a > div_b) {
+		return "BOB"
 	}
-	// fmt.Printf("Alice removed %v, array is %v\n", removed, numbers)
-
-	// Now each removes one until somebody wins.
-	for {
-		// Starting with Bob since Alice played.
-		removed, numbers = removeOneNumber(a, numbers)
-		if (removed == 0) {
-			// Failed to remove any. Alice wins.
-			return "ALICE"
-		}
-		removed, numbers = removeOneNumber(b, numbers)
-		if (removed == 0) {
-			// Failed to remove any. Bob wins.
-			return "BOB"
-		}
-	}
+	return "ALICE"
 }
 
 func readInt(reader *bufio.Reader) (int, error) {
@@ -114,8 +67,7 @@ func readIntSlice(reader *bufio.Reader) ([]int, error) {
 }
 
 func main() {
-	reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
-	//writer := bufio.NewWriterSize(os.Stdout, 1024 * 1024)
+	reader := bufio.NewReaderSize(os.Stdin, 2 * 1024 * 1024)
 
 	// The first line of the input contains a single integer TT denoting the number of test cases.
 	t, err := readInt(reader)
