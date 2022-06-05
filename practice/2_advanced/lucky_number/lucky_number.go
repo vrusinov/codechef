@@ -12,21 +12,20 @@ import (
 
 func luckyGame(a, b int, numbers []int) string {
 	// Don't actually need to remove numbers, just count divisible by both, by a and by b.
-	div_ab := 0
-	div_a := 0
-	div_b := 0
+	divAB := 0
+	divA := 0
+	divB := 0
 	for _, n := range numbers {
 		if ((n % a == 0) && (n % b == 0)) {
-			div_ab++
+			divAB++
 		} else if (n % a == 0) {
-			div_a++
+			divA++
 		} else if (n % b == 0) {
-			div_b++
+			divB++
 		}
 	}
-	//fmt.Printf("%v, %v %v: ab: %v, a: %b, b: %v\n", a, b, numbers, div_ab, div_a, div_b)
 	// Bob will have div_ab + div_a moves.
-	if (div_ab + div_a > div_b) {
+	if (divAB + divA > divB) {
 		return "BOB"
 	}
 	return "ALICE"
