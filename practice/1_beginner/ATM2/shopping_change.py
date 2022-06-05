@@ -4,7 +4,9 @@
 https://www.codechef.com/problems/ATM2
 """
 
-def atm(n, k, a):
+from typing import Any, Sequence
+
+def atm(n: Any, k: int, a: Sequence[int]):
     result = []
     del n  # unused
     for withdrawal in a:
