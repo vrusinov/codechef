@@ -3,14 +3,13 @@
 COPY='c'
 PUSH_BACK='p'
 
-def copypush(line, prev_op=''):
+def copypush(line: str, prev_op: str = ''):
     """Copy and Push Back.
 
     Idea: start from given line and try to apply Anon's actions in reverse.
     Try splitting or cutting characters from line to see if we can end up
     in empty string. Keep track of previous actions.
     """
-    #print(f'{line}, op={prev_op}')
     l = len(line)
     if l == 0:
         return 'yes'
