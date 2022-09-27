@@ -10,3 +10,6 @@ for d in $(find . -name \*.go | sed -r 's|/[^/]+$||' |sort -u) ; do
 done
 
 pytype .
+
+# Install presubmit
+ln -sf ../../presubmit.sh .git/hooks/pre-commit
