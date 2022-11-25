@@ -1,3 +1,10 @@
+<!--
+SPDX-FileCopyrightText: 2022 Google Inc
+SPDX-FileCopyrightText: 2022 Vladimir Rusinov <vrusinov@google.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # [Number Mirror](https://www.codechef.com/problems/START01)
 
 # Problem Statement

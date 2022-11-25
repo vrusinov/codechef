@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2022 Google Inc
+// SPDX-FileCopyrightText: 2022 Vladimir Rusinov <vrusinov@google.com>
+//
+// SPDX-License-Identifier: Apache-2.0
+
 fn palin_pain(x: i64, y: i64) -> Vec<String> {
     if (x%2 == 1) && (y%2 == 1) {
         // else both are odd - palindrome not possible.

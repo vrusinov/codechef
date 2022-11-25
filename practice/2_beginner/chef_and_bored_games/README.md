@@ -1,3 +1,10 @@
+<!--
+SPDX-FileCopyrightText: 2022 Google Inc
+SPDX-FileCopyrightText: 2022 Vladimir Rusinov <vrusinov@google.com>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # Chef and Bored Games
 
 https://www.codechef.com/submit-v2/PCJ18B
