@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2023 Vladimir Rusinov
+#
+# SPDX-License-Identifier: Apache-2.0
+
+[tool.ruff]
+
+ignore = ["E741"]

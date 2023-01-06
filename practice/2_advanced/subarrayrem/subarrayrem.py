@@ -14,7 +14,6 @@ def subarray_removal(arr):
             num_ones += 1
         else:
             num_zeroes += 1
-    m = min(num_zeroes, num_ones)
     if num_zeroes > num_ones:
         return num_ones
     else:
