@@ -5,6 +5,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
+
 def eopr(x: int, y: int) -> int:
     """Choose one positive odd integer a and one positive even integer b.
 
@@ -66,5 +67,6 @@ def main():
         x, y = [int(i) for i in input().split()]
         print(eopr(x, y))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
