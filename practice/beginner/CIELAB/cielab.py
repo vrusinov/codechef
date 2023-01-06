@@ -5,6 +5,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
+
 def ciel(a: int, b: int) -> int:
     correct = a - b
     if (correct % 10) == 0:
@@ -19,5 +20,6 @@ def main():
     a, b = [int(x) for x in input().split()]
     print(ciel(a, b))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
