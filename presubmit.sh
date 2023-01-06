@@ -11,7 +11,7 @@ set -e
 for d in $(find . -name \*.go | sed -r 's|/[^/]+$||' |sort -u) ; do
     pushd $d
     golangci-lint run
-    popd    
+    popd
 done
 
 pytype .
