@@ -35,6 +35,7 @@ Maths / combinatorics :(
 Looks like the formula is n**2 + (n-2)**2 + ...
 """
 
+
 def num_squares(n):
     """Returns number of squares with odd length."""
     r = 0
@@ -43,7 +44,7 @@ def num_squares(n):
     return r
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     t = int(input())
     for _ in range(t):
         n = int(input())
