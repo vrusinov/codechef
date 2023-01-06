@@ -5,6 +5,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
+
 def subarray_removal(arr):
     num_zeroes = 0
     num_ones = 0
@@ -19,7 +20,8 @@ def subarray_removal(arr):
     else:
         return num_zeroes + (num_ones - num_zeroes) // 3
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     t = int(input())
     for _ in range(t):
         unused_n = input()
