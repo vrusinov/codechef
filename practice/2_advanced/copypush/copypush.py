@@ -5,10 +5,11 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-COPY='c'
-PUSH_BACK='p'
+COPY = "c"
+PUSH_BACK = "p"
 
-def copypush(line: str, prev_op: str = ''):
+
+def copypush(line: str, prev_op: str = ""):
     """Copy and Push Back.
 
     Idea: start from given line and try to apply Anon's actions in reverse.
@@ -17,20 +18,19 @@ def copypush(line: str, prev_op: str = ''):
     """
     l = len(line)
     if l == 0:
-        return 'yes'
+        return "yes"
     # First, try to see if we can split the string into two equals.
     if l % 2 == 0:
-        if line[:l//2] == line[l//2:]:
-            if copypush(line[l//2:], prev_op=COPY) == 'yes':
-                return 'yes'
+        if line[: l // 2] == line[l // 2 :]:
+            if copypush(line[l // 2 :], prev_op=COPY) == "yes":
+                return "yes"
     # We tried splitting and it didn't work. Let's see if we can append.
     if prev_op == PUSH_BACK:
-        return 'no'
+        return "no"
     return copypush(line[:-1], PUSH_BACK)
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     t = input()
     for _ in range(int(t)):
         unused_n = input()
