@@ -12,6 +12,7 @@ https://www.codechef.com/problems/ATM2
 
 from typing import Any, Sequence
 
+
 def atm(n: Any, k: int, a: Sequence[int]):
     result = []
     del n  # unused
@@ -21,7 +22,8 @@ def atm(n: Any, k: int, a: Sequence[int]):
             result.append(1)
         else:
             result.append(0)
-    return ''.join(str(x) for x in result)
+    return "".join(str(x) for x in result)
+
 
 def main():
     t = int(input())
@@ -33,5 +35,5 @@ def main():
         print(atm(n, k, a))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
