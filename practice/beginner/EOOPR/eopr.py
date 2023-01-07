@@ -64,7 +64,7 @@ def main():
     # Number of test cases
     t = int(input())
     for _ in range(t):
-        x, y = [int(i) for i in input().split()]
+        x, y = (int(i) for i in input().split())
         print(eopr(x, y))
 
 
