@@ -5,9 +5,9 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-import chef
-
 import unittest
+
+import chef
 
 
 class TestNumSquares(unittest.TestCase):
