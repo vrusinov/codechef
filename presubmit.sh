@@ -17,6 +17,3 @@ done
 pytype .
 
 reuse lint
-
-# Install presubmit
-ln -sf ../../presubmit.sh .git/hooks/pre-commit
