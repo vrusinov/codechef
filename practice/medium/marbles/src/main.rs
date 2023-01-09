@@ -10,7 +10,7 @@ fn marbles(n: i64, k: i64) -> i64 {
 
     // first we pick one of each.
 
-    // Thre rest is n-k multicombination.
+    // The rest is n-k multicombination.
     // https://en.wikipedia.org/wiki/Combination#Number_of_combinations_with_repetition
 
     let nn = n - k;
