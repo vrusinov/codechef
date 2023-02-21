@@ -37,7 +37,7 @@ repos:
         language: system
         always_run: true
 -   repo: https://github.com/pycqa/isort
-    rev: 5.11.4
+    rev: 5.11.5
     hooks:
       - id: isort
         name: isort (python)
@@ -45,3 +45,7 @@ repos:
     rev: v1.13.6
     hooks:
       - id: typos
+- repo: https://github.com/golangci/golangci-lint
+  rev: "v1.51.2"
+  hooks:
+    - id: golangci-lint
