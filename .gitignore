@@ -1,33 +1,30 @@
 # SPDX-FileCopyrightText: 2022 Google Inc
-# SPDX-FileCopyrightText: 2022 Vladimir Rusinov <vrusinov@google.com>
+# SPDX-FileCopyrightText: 2022-2023 Vladimir Rusinov <vladimir.rusinov@gmail.com>
 #
 # SPDX-License-Identifier: Apache-2.0
 
-# Byte-compiled / optimized / DLL files
 __pycache__/
+.eggs/
+.installed.cfg
+.Python
+*.egg
+*.egg-info/
 *.py[cod]
 *$py.class
-
-# Distribution / packaging
-.Python
 build/
 develop-eggs/
 dist/
 downloads/
 eggs/
-.eggs/
 lib/
 lib64/
+MANIFEST
 parts/
+pip-wheel-metadata/
 sdist/
+share/python-wheels/
 var/
 wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -132,3 +129,5 @@ dmypy.json
 
 .vscode
 .reuse/
+
+*.java
