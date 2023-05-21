@@ -9,7 +9,9 @@ __pycache__/
 .Python
 *.egg
 *.egg-info/
+*.manifest
 *.py[cod]
+*.spec
 *$py.class
 build/
 develop-eggs/
@@ -25,12 +27,6 @@ sdist/
 share/python-wheels/
 var/
 wheels/
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
 
 # Installer logs
 pip-log.txt
@@ -130,4 +126,4 @@ dmypy.json
 .vscode
 .reuse/
 
-*.java
+*.class
