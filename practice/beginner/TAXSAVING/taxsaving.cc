@@ -8,18 +8,16 @@
 #include <iostream>
 using namespace std;
 
-int tax_saving(int x, int y) {
-    return x - y;
-}
+int tax_saving(int x, int y) { return x - y; }
 
 int main() {
-	int t;
-    cin >> t;
-    for (int i = 0; i < t; i++) {
-        int x, y;
-        cin >> x;
-        cin >> y;
-        cout << tax_saving(x, y) << "\n";
-    }
-	return 0;
+  int t;
+  cin >> t;
+  for (int i = 0; i < t; i++) {
+    int x, y;
+    cin >> x;
+    cin >> y;
+    cout << tax_saving(x, y) << "\n";
+  }
+  return 0;
 }

@@ -10,13 +10,10 @@
 #include <iostream>
 using namespace std;
 
-char lucky_seven(string s) {
-    return s[6];
-}
+char lucky_seven(string s) { return s[6]; }
 
 int main() {
-    string s;
-    cin >> s;
-	cout << lucky_seven(s);
-
+  string s;
+  cin >> s;
+  cout << lucky_seven(s);
 }
