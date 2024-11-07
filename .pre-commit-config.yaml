@@ -6,10 +6,10 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
-    -   id: trailing-whitespace
-    -   id: end-of-file-fixer
-    -   id: check-yaml
-    -   id: check-added-large-files
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
   - repo: https://github.com/charliermarsh/ruff-pre-commit
     rev: 'v0.6.9'
     hooks:
@@ -64,3 +64,7 @@ repos:
     rev: v1.35.1
     hooks:
       - id: yamllint
+  - repo: https://github.com/igorshubovych/markdownlint-cli.git
+    rev: v0.42.0
+    hooks:
+          - id: markdownlint
