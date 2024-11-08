@@ -17,10 +17,10 @@ repos:
         # Respect `exclude` and `extend-exclude` settings.
         args: ["--force-exclude"]
       - id: ruff-format
-  -   repo: https://github.com/asottile/pyupgrade
-      rev: v3.18.0
-      hooks:
-      -   id: pyupgrade
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.18.0
+    hooks:
+      - id: pyupgrade
   -   repo: https://github.com/PyCQA/flake8
       rev: 7.1.1
       hooks:
@@ -68,3 +68,7 @@ repos:
     rev: v0.42.0
     hooks:
           - id: markdownlint
+  - repo: https://github.com/markdownlint/markdownlint.git
+    rev: v0.13.0
+    hooks:
+      - id: markdownlint
