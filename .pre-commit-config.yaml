@@ -1,5 +1,4 @@
-# SPDX-FileCopyrightText: 2023 Vladimir Rusinov
-#
+# SPDX-FileCopyrightText: 2023-2025 Vladimir Rusinov
 # SPDX-License-Identifier: Apache-2.0
 ---
 repos:
@@ -67,3 +66,7 @@ repos:
     rev: v3.3.4
     hooks:
       - id: pylint
+  - repo: https://github.com/amperser/proselint
+    rev: 0.14.0
+    hooks:
+      - id: proselint
