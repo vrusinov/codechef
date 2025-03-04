@@ -10,7 +10,7 @@ repos:
       - id: check-yaml
       - id: check-added-large-files
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: 'v0.9.7'
+    rev: 'v0.9.9'
     hooks:
       - id: ruff
       - id: ruff-format
@@ -26,16 +26,16 @@ repos:
           - flake8-bugbear==24.2.6
           - wemake-python-styleguide==1.0.0
   - repo: https://github.com/pycqa/isort
-    rev: 6.0.0
+    rev: 6.0.1
     hooks:
       - id: isort
         name: isort (python)
   - repo: https://github.com/crate-ci/typos
-    rev: v1.29.9
+    rev: v1
     hooks:
       - id: typos
   - repo: https://github.com/golangci/golangci-lint
-    rev: "v1.64.5"
+    rev: "v1.64.6"
     hooks:
       - id: golangci-lint
   - repo: https://github.com/pre-commit/mirrors-clang-format
