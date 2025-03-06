@@ -1,0 +1,13 @@
+// SPDX-FileCopyrightText: 2025 Vladimir Rusinov
+// SPDX-License-Identifier: Apache-2.0
+
+go 1.23.6
+
+use (
+	./practice/2_advanced/delxorone
+	./practice/2_advanced/lucky_number
+	./practice/2_advanced/magicjar
+	./practice/beginner/500_diff/LUDO
+	./practice/beginner/BEGGASOL
+	./practice/beginner/SHOPCHANGE
+)
