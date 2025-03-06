@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 
 # SPDX-FileCopyrightText: 2022 Google Inc
-# SPDX-FileCopyrightText: 2022 Vladimir Rusinov <vrusinov@google.com>
-#
+# SPDX-FileCopyrightText: 2022,2025 Vladimir Rusinov <vrusinov@google.com>
 # SPDX-License-Identifier: Apache-2.0
 
 
-def subarray_removal(arr):
+def subarray_removal(arr: list[int]) -> int:
     num_zeroes = 0
     num_ones = 0
     for i in arr:
