@@ -14,7 +14,7 @@
         pkgs = import nixpkgs {
           inherit system;
         };
-        fhs = pkgs.buildFHSUserEnv {
+        fhs = pkgs.buildFHSEnv {
           name = "fhs-shell";
           targetPkgs = pkgs: [
             pkgs.git
@@ -25,7 +25,6 @@
         };
       in
       {
-        #devShell = pkgs.mkShell { buildInputs = devDeps; };
         devShells.default = fhs.env;
       });
 }
